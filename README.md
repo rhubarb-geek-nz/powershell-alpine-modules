@@ -10,45 +10,45 @@ Build the project.
 
 ```
 $ abuild
->>> powershell-modules: Building alpine/powershell-modules 7.3.4-r1 (using abuild 3.11.1-r0) started Tue, 28 Nov 2023 00:36:09 +0000
->>> powershell-modules-archive*: Create powershell-modules-archive-7.3.4-r1.apk
->>> powershell-modules-packagemanagement*: Create powershell-modules-packagemanagement-7.3.4-r1.apk
->>> powershell-modules-powershellget*: Create powershell-modules-powershellget-7.3.4-r1.apk
->>> powershell-modules-psreadline*: Create powershell-modules-psreadline-7.3.4-r1.apk
->>> powershell-modules-threadjob*: Create powershell-modules-threadjob-7.3.4-r1.apk
->>> powershell-modules*: Create powershell-modules-7.3.4-r1.apk
+>>> powershell-modules-archive*: Create powershell-modules-archive-7.2.7-r0.apk
+>>> powershell-modules-packagemanagement*: Create powershell-modules-packagemanagement-7.2.7-r0.apk
+>>> powershell-modules-powershellget*: Create powershell-modules-powershellget-7.2.7-r0.apk
+>>> powershell-modules-psreadline*: Create powershell-modules-psreadline-7.2.7-r0.apk
+>>> powershell-modules-threadjob*: Create powershell-modules-threadjob-7.2.7-r0.apk
+>>> powershell-modules*: Create powershell-modules-7.2.7-r0.apk
 ```
 
 Should build the `apk` files.
 
 ```
 $ ls $HOME/packages/alpine/$(arch) | grep powershell-module
-powershell-modules-7.3.4-r1.apk
-powershell-modules-archive-7.3.4-r1.apk
-powershell-modules-packagemanagement-7.3.4-r1.apk
-powershell-modules-powershellget-7.3.4-r1.apk
-powershell-modules-psreadline-7.3.4-r1.apk
-powershell-modules-threadjob-7.3.4-r1.apk
+powershell-modules-7.2.7-r0.apk
+powershell-modules-archive-7.2.7-r0.apk
+powershell-modules-packagemanagement-7.2.7-r0.apk
+powershell-modules-powershellget-7.2.7-r0.apk
+powershell-modules-psreadline-7.2.7-r0.apk
+powershell-modules-threadjob-7.2.7-r0.apk
 ```
 
 Install with
 
 ```
-$ sudo apk add $(find $HOME/packages/alpine/$(arch) -name "powershell-modules-*7.3.4-r1.apk")
-(1/12) Installing dotnet-host (7.0.14-r0)
-(2/12) Installing dotnet7-hostfxr (7.0.14-r0)
-(3/12) Installing lttng-ust (2.13.5-r2)
-(4/12) Installing dotnet7-runtime (7.0.14-r0)
-(5/12) Installing libpsl-native (7.3.1-r0)
-(6/12) Installing powershell (7.3.4-r1)
-(7/12) Installing powershell-modules (7.3.4-r1)
-(8/12) Installing powershell-modules-archive (7.3.4-r1)
-(9/12) Installing powershell-modules-packagemanagement (7.3.4-r1)
-(10/12) Installing powershell-modules-powershellget (7.3.4-r1)
-(11/12) Installing powershell-modules-psreadline (7.3.4-r1)
-(12/12) Installing powershell-modules-threadjob (7.3.4-r1)
-Executing busybox-1.36.1-r2.trigger
-OK: 444 MiB in 101 packages
+$ sudo apk add $(find $HOME/packages/alpine/$(arch) -name "powershell-modules-*7.2.7-r0.apk")
+(1/14) Installing dotnet-host (7.0.4-r0)
+(2/14) Installing dotnet6-hostfxr (6.0.15-r0)
+(3/14) Installing lttng-ust (2.13.3-r0)
+(4/14) Installing xz-libs (5.2.9-r0)
+(5/14) Installing libunwind (1.6.2-r0)
+(6/14) Installing dotnet6-runtime (6.0.15-r0)
+(7/14) Installing libpsl-native (7.2.0-r0)
+(8/14) Installing powershell (7.2.7-r0)
+(9/14) Installing powershell-modules (7.2.7-r0)
+(10/14) Installing powershell-modules-archive (7.2.7-r0)
+(11/14) Installing powershell-modules-packagemanagement (7.2.7-r0)
+(12/14) Installing powershell-modules-powershellget (7.2.7-r0)
+(13/14) Installing powershell-modules-psreadline (7.2.7-r0)
+(14/14) Installing powershell-modules-threadjob (7.2.7-r0)
+Executing busybox-1.35.0-r29.trigger
 ```
 
 The missing modules should now be present.
