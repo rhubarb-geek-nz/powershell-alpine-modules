@@ -1,20 +1,20 @@
 # Contributor: rhubarb-geek-nz <rhubarb-geek-nz@users.sourceforge.net>
 # Maintainer: rhubarb-geek-nz <rhubarb-geek-nz@users.sourceforge.net>
 pkgname=powershell-modules
-pkgver=7.3.9
+pkgver=7.4.0
 pkgrel=0
 pkgdesc="PowerShell Modules"
 url="https://github.com/rhubarb-geek-nz/powershell-alpine-modules"
 arch="noarch"
 license="MIT"
-depends="powershell=7.3.9-r0"
+depends="powershell=7.4.0-r0"
 makedepends=""
 checkdepends=""
 install=""
 subpackages=""
-source="https://github.com/PowerShell/PowerShell/releases/download/v7.3.9/powershell-7.3.9-linux-alpine-x64.tar.gz"
+source="https://github.com/PowerShell/PowerShell/releases/download/v7.4.0/powershell-7.4.0-linux-musl-x64.tar.gz"
 builddir="$srcdir/"
-subpackages="$pkgname-archive:packagearchive $pkgname-packagemanagement:packagepackagemanagement $pkgname-threadjob:packagethreadjob $pkgname-psreadline:packagepsreadline $pkgname-powershellget:packagepowershellget"
+subpackages="$pkgname-archive:packagearchive $pkgname-packagemanagement:packagepackagemanagement $pkgname-threadjob:packagethreadjob $pkgname-psreadline:packagepsreadline $pkgname-powershellget:packagepowershellget $pkgname-psresourceget:packagepsresourceget"
 
 build() {
 	:
@@ -55,6 +55,11 @@ packagepowershellget() {
 	tar -cf - -C "$srcdir" "Modules/PowerShellGet" | tar xf - -C "$subpkgdir/usr/lib/powershell"
 }
 
+packagepsresourceget() {
+	install -d "$subpkgdir/usr/lib/powershell/Modules/Microsoft.PowerShell.PSResourceGet"
+	tar -cf - -C "$srcdir" "Modules/Microsoft.PowerShell.PSResourceGet" | tar xf - -C "$subpkgdir/usr/lib/powershell"
+}
+
 sha512sums="
-8d4d83e6bc8fc40804cc0b353a4ac56c9b0d0dd4a132c8be88a87beef6ba8199a75af067a8864d40c5f0a2b1b970c28e33cb3f5604dd16f622821cbd4c3b5a33  powershell-7.3.9-linux-alpine-x64.tar.gz
+9397a2eeb691bedb93b201bcdbeb8a62746c055366679c66ef507ce0cf615d902343b1ffba333effe3c045b74ffd8231186227db088d4a4eff4eb34b123a048b  powershell-7.4.0-linux-musl-x64.tar.gz
 "
