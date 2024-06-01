@@ -1,18 +1,18 @@
 # Contributor: rhubarb-geek-nz <rhubarb-geek-nz@users.sourceforge.net>
 # Maintainer: rhubarb-geek-nz <rhubarb-geek-nz@users.sourceforge.net>
 pkgname=powershell-modules
-pkgver=7.3.9
+pkgver=7.3.12
 pkgrel=0
 pkgdesc="PowerShell Modules"
 url="https://github.com/rhubarb-geek-nz/powershell-alpine-modules"
 arch="noarch"
 license="MIT"
-depends="powershell=7.3.9-r0"
+depends="powershell=7.3.12-r0"
 makedepends=""
 checkdepends=""
 install=""
 subpackages=""
-source="https://github.com/PowerShell/PowerShell/releases/download/v7.3.9/powershell-7.3.9-linux-alpine-x64.tar.gz"
+source="https://github.com/PowerShell/PowerShell/releases/download/v7.3.12/powershell-7.3.12-linux-alpine-x64.tar.gz"
 builddir="$srcdir/"
 subpackages="$pkgname-archive:packagearchive $pkgname-packagemanagement:packagepackagemanagement $pkgname-threadjob:packagethreadjob $pkgname-psreadline:packagepsreadline $pkgname-powershellget:packagepowershellget"
 
@@ -56,5 +56,5 @@ packagepowershellget() {
 }
 
 sha512sums="
-8d4d83e6bc8fc40804cc0b353a4ac56c9b0d0dd4a132c8be88a87beef6ba8199a75af067a8864d40c5f0a2b1b970c28e33cb3f5604dd16f622821cbd4c3b5a33  powershell-7.3.9-linux-alpine-x64.tar.gz
+cc751ca0bc3d433ade7bc31512ba9c41a686b0ece8dcc9394ac3076a62084d10a1f93f6849c2720844446100b9f63c420c1541b20632a35fa3050de4becd362a  powershell-7.3.12-linux-alpine-x64.tar.gz
 "
