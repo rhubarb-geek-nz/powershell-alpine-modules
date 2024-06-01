@@ -1,18 +1,18 @@
 # Contributor: rhubarb-geek-nz <rhubarb-geek-nz@users.sourceforge.net>
 # Maintainer: rhubarb-geek-nz <rhubarb-geek-nz@users.sourceforge.net>
 pkgname=powershell-modules
-pkgver=7.4.0
+pkgver=7.4.2
 pkgrel=0
 pkgdesc="PowerShell Modules"
 url="https://github.com/rhubarb-geek-nz/powershell-alpine-modules"
 arch="noarch"
 license="MIT"
-depends="powershell=7.4.0-r0"
+depends="powershell=7.4.2-r0"
 makedepends=""
 checkdepends=""
 install=""
 subpackages=""
-source="https://github.com/PowerShell/PowerShell/releases/download/v7.4.0/powershell-7.4.0-linux-musl-x64.tar.gz"
+source="https://github.com/PowerShell/PowerShell/releases/download/v7.4.2/powershell-7.4.2-linux-musl-x64.tar.gz"
 builddir="$srcdir/"
 subpackages="$pkgname-archive:packagearchive $pkgname-packagemanagement:packagepackagemanagement $pkgname-threadjob:packagethreadjob $pkgname-psreadline:packagepsreadline $pkgname-powershellget:packagepowershellget $pkgname-psresourceget:packagepsresourceget"
 
@@ -61,5 +61,5 @@ packagepsresourceget() {
 }
 
 sha512sums="
-9397a2eeb691bedb93b201bcdbeb8a62746c055366679c66ef507ce0cf615d902343b1ffba333effe3c045b74ffd8231186227db088d4a4eff4eb34b123a048b  powershell-7.4.0-linux-musl-x64.tar.gz
+9ac7d11d4318bff9348a22573cf6e1dfce8b7dc8f8414e4bbeff6e15cd27d5d5765825cc597cbd95d2eea713e0045f971cc4acde6e85a3d3dd4515090f5353b5  powershell-7.4.2-linux-musl-x64.tar.gz
 "
